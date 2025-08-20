@@ -2,6 +2,11 @@
 
 This project integrates a Summit Health Transfer Center interface with Genesys Cloud for call transfers and agent consultations. It works both as a standalone application and when embedded as an iframe in the Genesys Cloud agent scripts panel.
 
+## GitHub Pages Deployment
+
+This application is deployed using GitHub Pages and can be accessed at:
+https://julieclkim.github.io/genscript/
+
 ## Setup for Live Interaction (Iframe in Genesys Cloud)
 
 ### Prerequisites
