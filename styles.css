@@ -1,0 +1,84 @@
+/* Custom styling for Summit Health Transfer Center */
+
+/* Header styling */
+header.bg-primary {
+    background-color: #003087 !important; /* Deep blue color similar to the mockup */
+}
+
+/* Card styling */
+.card {
+    border-radius: 0;
+    border: 1px solid #000;
+    margin-bottom: 15px;
+}
+
+.card-header {
+    background-color: white;
+    border-bottom: 1px solid #000;
+    font-weight: bold;
+    padding: 0.5rem 1rem;
+}
+
+/* Button styling to match the light blue in mockup */
+.btn-info {
+    background-color: #a8d8e0 !important;
+    border-color: #a8d8e0 !important;
+    color: #000 !important;
+}
+
+.btn-info:hover, .btn-info:focus {
+    background-color: #8bc9d4 !important;
+    border-color: #8bc9d4 !important;
+}
+
+/* Selected category button */
+.category-btn.selected {
+    background-color: #6ca9b4 !important;
+    border-color: #6ca9b4 !important;
+    font-weight: bold;
+}
+
+/* Form control styling */
+.form-select, .form-control {
+    border-radius: 0;
+    border: 1px solid #000;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .card-body {
+        padding: 0.75rem;
+    }
+    
+    header h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Small screen adjustments */
+@media (max-width: 576px) {
+    .container {
+        padding: 0 10px;
+    }
+    
+    .row > div {
+        padding: 0 5px;
+    }
+    
+    .btn, .form-control, .form-select {
+        font-size: 0.875rem;
+    }
+    
+    header h4 {
+        font-size: 0.875rem;
+    }
+}
+
+/* Make sure category buttons remain visible on all screen sizes */
+.category-btn {
+    margin-bottom: 5px;
+    padding: 0.25rem 0.5rem;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}

@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Summit Health Transfer Center</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link href="styles.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container-fluid p-0">
+        <!-- Header Banner -->
+        <header class="bg-primary text-white p-3">
+            <h4 class="mb-0">Thank you for calling Summit Health Transfer Center. This is SLEMM. Am I speaking with Dr. Jones?</h4>
+        </header>
+
+        <div class="container mt-3">
+            <div class="row">
+                <!-- Left Panel - Re-Queue/Consult -->
+                <div class="col-lg-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Re - Queue/Consult</strong>
+                        </div>
+                        <div class="card-body">
+                            <!-- Provider Referral Form Button -->
+                            <div class="mb-3">
+                                <button class="btn btn-info text-dark w-100 text-start" id="providerReferralFormBtn">ProviderReferralForm</button>
+                            </div>
+                            
+                            <!-- Queue Selection -->
+                            <div class="row mb-3">
+                                <div class="col-8">
+                                    <select class="form-select" id="queueList">
+                                        <option selected disabled>Queue List ▼</option>
+                                        <option>General</option>
+                                        <option>Neurology</option>
+                                        <option>Oncology</option>
+                                        <option>Cardiology</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100" id="transferBtn">Transfer</button>
+                                </div>
+                            </div>
+                            
+                            <!-- Agent Selection -->
+                            <div class="row mb-3">
+                                <div class="col-8">
+                                    <select class="form-select" id="agentList">
+                                        <option selected disabled>Agent List ▼</option>
+                                        <option>John Smith</option>
+                                        <option>Sarah Johnson</option>
+                                        <option>Michael Brown</option>
+                                        <option>Emily Davis</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100" id="consultBtn">Consult</button>
+                                </div>
+                            </div>
+
+                            <!-- Reason for Transfer Section -->
+                            <div class="mb-3">
+                                <label class="form-label">Reason for Transfer / Diagnosis: <span id="diagnosisText">Partially complex seizures</span></label>
+                            </div>
+
+                            <!-- Categories Grid -->
+                            <div class="row g-2">
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100 category-btn" data-category="Breast">Breast</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100 category-btn" data-category="Colorectal">Colorectal</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100 category-btn" data-category="GI_Other">GI_Other</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100 category-btn" data-category="Gyn">Gyn</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100 category-btn" data-category="Head&Neck">Head&Neck</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100 category-btn" data-category="Hepato">Hepato</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100 category-btn" data-category="Leukemia">Leukemia</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100 category-btn" data-category="Lymphoma">Lymphoma</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100 category-btn" data-category="Pancreatic">Pancreatic</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100 category-btn" data-category="Prostate">Prostate</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100 category-btn" data-category="Renal">Renal</button>
+                                </div>
+                                <div class="col-4">
+                                    <button class="btn btn-info text-dark w-100 category-btn" data-category="Neuro">Neuro</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Panel - Provider Information -->
+                <div class="col-lg-6 mb-3">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>Provider Information</strong>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-2">
+                                <p class="mb-1"><strong>Dr. Andrew Jones</strong></p>
+                                <p class="mb-1">Westend Family Clinic</p>
+                                <p class="mb-1">308 Oak St, Madison, WI 53711</p>
+                                <p class="mb-1">westendfamily@med.com</p>
+                                <p class="mb-1">613-724-6815</p>
+                            </div>
+                            
+                            <div class="row mb-3 align-items-center">
+                                <div class="col-3">
+                                    <label for="npiInput" class="form-label mb-0">NPI</label>
+                                </div>
+                                <div class="col-6">
+                                    <input type="text" class="form-control" id="npiInput" value="4329">
+                                </div>
+                                <div class="col-12 mt-2">
+                                    <button class="btn btn-info text-dark" id="providerLookupBtn">ProviderLookup</button>
+                                </div>
+                            </div>
+
+                            <hr>
+
+                            <div class="mb-3">
+                                <p class="mb-1"><strong>Patient: </strong>Samuel Jackson • DOB: 10/10/1970 • MRN: 123456</p>
+                                <p class="mb-1"><strong>Epic MyChart: </strong>Active • PCP: Dr. Patel</p>
+                            </div>
+                            
+                            <div class="row mb-3">
+                                <div class="col-sm-6 mb-2">
+                                    <button class="btn btn-info text-dark w-100" id="openEpicChartBtn">Open in Epic (Chart)</button>
+                                </div>
+                                <div class="col-sm-6 mb-2">
+                                    <button class="btn btn-info text-dark w-100" id="openEpicTransferOrderBtn">Open Epic Transfer Order</button>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <p class="mb-1"><strong>Risk flags: </strong>Recent seizures, High fall risk</p>
+                                <p class="mb-1"><strong>Notes: </strong>Referring provider expects bed today.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Bottom Panel - Provider TX Consult -->
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <strong>ProviderTxConsult</strong>
+                        </div>
+                        <div class="card-body">
+                            <div class="mb-3">
+                                <p class="mb-1"><strong>Participants: </strong>Dr. Jones, Transfer Associate, Nurse Coordinator, Dr. DeVito</p>
+                            </div>
+                            
+                            <div class="row mb-3">
+                                <div class="col-md-4 mb-2">
+                                    <button class="btn btn-info text-dark w-100" id="addParticipantBtn">Add Participant</button>
+                                </div>
+                                <div class="col-md-4 mb-2">
+                                    <button class="btn btn-info text-dark w-100" id="leaveBridgeBtn">Leave Bridge (Associate)</button>
+                                </div>
+                                <div class="col-md-4 mb-2">
+                                    <button class="btn btn-info text-dark w-100" id="viewRecordingBtn">View Recording/Transcript</button>
+                                </div>
+                            </div>
+
+                            <div class="mb-3">
+                                <p class="mb-1"><strong>Suggested Wrap: </strong>Transfer - Neuro Consult • <strong>Summary: </strong>Provider-to-provider consult initiated; bed pending.</p>
+                            </div>
+                            
+                            <div class="mb-3">
+                                <button class="btn btn-info text-dark" id="copySummaryBtn">Copy Summary to Epic</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap & jQuery JS -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Genesys Cloud SDK & API Integration -->
+    <script src="https://sdk-cdn.mypurecloud.com/client-apps/2.6.2/purecloud-client-app-sdk.js"></script>
+    <script src="genesys-sdk.js"></script>
+    <script src="genesys-api.js"></script>
+    <!-- Custom JS -->
+    <script src="script.js"></script>
+</body>
+</html>
